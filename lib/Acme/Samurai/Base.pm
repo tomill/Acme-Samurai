@@ -22,7 +22,7 @@ sub parts_pop {
 sub mecab_new {
     my $self = shift;
     my $mecab = Text::MeCab->new({
-        node_format => '%m,%H', 
+        node_format => '%m,%H',
         unk_format  => '%m,%H',
         bos_format  => '%m,%H',
         eos_format  => '%m,%H',
@@ -68,7 +68,7 @@ sub transform {
         }
     }
     
-    $self->text(join "", @{ $self->parts }); 
+    $self->text(join "", @{ $self->parts });
     $self->call('finalize');
     $self->text;
 }
@@ -108,7 +108,7 @@ sub Text::MeCab::Node::decoded_node {
     my $format = $encoding->decode( $node->format($mecab) );
     my ($surface, @feature) = split /,/, $format;
     
-    return Acme::Samurai::Base::Node->new({ 
+    return Acme::Samurai::Base::Node->new({
         mecab     => $mecab,
         node      => $node,
         stat_type => $node->stat_type,

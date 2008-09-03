@@ -1,7 +1,7 @@
 package Acme::Samurai;
 use strict;
 use warnings;
-our $VERSION = '0.013';
+our $VERSION = '0.02';
 
 use utf8;
 use base 'Acme::Samurai::Base';
@@ -163,19 +163,6 @@ Acme::Samurai translates present-day Japanese to 時代劇
 
 =back
 
-=head1 AUTHOR
-
-Naoki Tomita E<lt>tomita@cpan.orgE<gt>
-
-Special thanks to kazina, this module started from てきすたー dictionary.
-
-and Hiroko Nagashima, Shin Yamauchi for addition vocabulary.
-
-=head1 LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
 =head1 SEE ALSO
 
 Sample form: L<http://samurai.koneta.org/>
@@ -183,5 +170,19 @@ Sample form: L<http://samurai.koneta.org/>
 L<Text::MeCab>
 
 L<http://coderepos.org/share/browser/lang/perl/Acme-Samurai> (repository)
+
+=head1 AUTHOR
+
+Naoki Tomita E<lt>tomita@cpan.orgE<gt>
+
+Special thanks to kazina, this module started from てきすたー dictionary.
+L<http://kazina.com/texter/index.html>
+
+and Hiroko Nagashima, Shin Yamauchi for addition samurai vocabulary.
+
+=head1 LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut

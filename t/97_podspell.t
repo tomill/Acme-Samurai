@@ -7,3 +7,7 @@ all_pod_files_spelling_ok('lib');
 __DATA__
 Naoki Tomita
 Acme::Samurai
+Hiroko Nagashima
+Shin Yamauchi
+de gozaru
+kazina
