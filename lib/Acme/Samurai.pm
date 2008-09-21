@@ -32,9 +32,9 @@ sub 名詞_rule {
     if ($node->features->{extra}) {
         return $node->features->{extra};
     }
-    elsif ($node->features->{category1} eq '数' and
-        $node->surface =~ /^[0-9]+$/) {
-        if ($node->prev_node->surface =~ /[.．]/) {
+    elsif ($node->features->{category1} eq '数' and $node->surface =~ /^[0-9]+$/) { # arabic number
+        if ($node->surface =~ /^0/ or
+            $node->prev_node->surface =~ /[.．]/) {
             my $r = "";
             $r .= Lingua::JA::Numbers::num2ja($_) for split //, $node->surface;
             return $r;
@@ -42,7 +42,7 @@ sub 名詞_rule {
             return Lingua::JA::Numbers::num2ja($node->surface);
         }
     }
-    elsif ($node->features->{category1} eq '数') {
+    elsif ($node->features->{category1} eq '数') { # maybe kanji number
         my $text = $node->surface;
         $text =~ tr{〇一二三四五六七八九十百万}
                    {零壱弐参四伍六七八九拾佰萬};
@@ -165,7 +165,7 @@ Acme::Samurai translates present-day Japanese to 時代劇
 
 =head1 SEE ALSO
 
-Sample form: L<http://samurai.koneta.org/>
+Test form: L<http://samurai.koneta.org/>
 
 L<Text::MeCab>
 
