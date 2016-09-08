@@ -186,4 +186,6 @@ and Hiroko Nagashima, Shin Yamauchi for addition samurai vocabulary.
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
+=for stopwords hiroko nagashima shin yamauchi de gozaru kazina
+
 =cut
