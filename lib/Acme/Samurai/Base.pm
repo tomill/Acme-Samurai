@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Class::Trigger;
 use Encode;
-use File::ShareDir 'module_file';
+use File::ShareDir 'dist_file';
 use Text::MeCab;
 
 use base 'Class::Accessor::Fast';
@@ -26,7 +26,7 @@ sub mecab_new {
         unk_format  => '%m,%H',
         bos_format  => '%m,%H',
         eos_format  => '%m,%H',
-        userdic     => module_file(ref $self, 'user.dic'),
+        userdic     => dist_file('Acme-Samurai', 'user.dic'),
         %{ $self->mecab_option || {} },
     });
 }
@@ -119,30 +119,6 @@ sub Text::MeCab::Node::decoded_node {
             \%_tmp;
         },
     });
-}
-
-
-package Acme::Samurai::Base::Node;
-use strict;
-use Scalar::Util qw(weaken);
-
-use base 'Class::Accessor::Fast';
-__PACKAGE__->mk_accessors(qw( mecab node stat_type surface feature features ));
-
-sub new {
-    my $self = shift->SUPER::new(@_);
-    weaken $self->{mecab};
-    $self;
-}
-
-for my $sub (qw( next prev )) {
-    no strict 'refs'; ## no critic
-    *{__PACKAGE__ . "::${sub}_node"} = sub {
-        my $self = shift;
-        my $node = $self->node->$sub;
-        return $node->decoded_node($self->mecab)
-            if $node;
-    };
 }
 
 1;

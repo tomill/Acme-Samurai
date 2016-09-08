@@ -1,10 +1,11 @@
 package Acme::Samurai;
 use strict;
 use warnings;
+use utf8;
 our $VERSION = '0.02';
 
-use utf8;
 use base 'Acme::Samurai::Base';
+
 use Lingua::JA::Alphabet::Yomi;
 use Lingua::JA::Numbers;
 use Unicode::Japanese;

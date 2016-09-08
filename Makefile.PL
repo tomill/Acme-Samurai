@@ -16,7 +16,7 @@ test_requires 'Test::More';
 test_requires 'Test::Base';
 
 use_test_base;
-install_share qw( module Acme::Samurai ), 'share';
+install_share 'share';
 auto_include;
 
 WriteAll;
