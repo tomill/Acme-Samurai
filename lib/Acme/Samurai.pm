@@ -166,19 +166,21 @@ __END__
 
 =head1 NAME
 
-Acme::Samurai - Samurai de gozaru
+Acme::Samurai - Speak like a Samurai
 
 =head1 SYNOPSIS
 
-  use Acme::Samurai;
   use utf8;
+  use Acme::Samurai;
 
-  Acme::Samurai->gozaru("私、侍です"); # それがし、侍でござる
+  Acme::Samurai->gozaru("私、侍です"); # => "それがし、侍でござる"
 
 =head1 DESCRIPTION
 
-Acme::Samurai translates present-day Japanese to 時代劇
+Translates Japanese to 時代劇
 (L<http://en.wikipedia.org/wiki/Jidaigeki>) speak.
+
+Test form: L<http://samurai.koneta.org/>
 
 =head1 METHODS
 
@@ -188,19 +190,13 @@ Acme::Samurai translates present-day Japanese to 時代劇
 
 =back
 
-=head1 SEE ALSO
-
-Test form: L<http://samurai.koneta.org/>
-
-L<Text::MeCab>
-
-L<http://coderepos.org/share/browser/lang/perl/Acme-Samurai> (repository)
-
 =head1 AUTHOR
 
 Naoki Tomita E<lt>tomita@cpan.orgE<gt>
 
-Special thanks to kazina, this module started from てきすたー dictionary.
+=head1 SPECIAL THANKS
+
+kazina, this module started from てきすたー dictionary.
 L<http://kazina.com/texter/index.html>
 
 and Hiroko Nagashima, Shin Yamauchi for addition samurai vocabulary.

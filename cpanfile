@@ -1,11 +1,11 @@
-requires 'Class::Accessor::Fast';
-requires 'Class::Trigger';
+requires 'perl', '5.010001';
+
+requires 'Text::Mecabist';
+
 requires 'Encode';
 requires 'File::ShareDir';
-requires 'Filter::Util::Call';
 requires 'Lingua::JA::Alphabet::Yomi';
 requires 'Lingua::JA::Numbers';
-requires 'Text::MeCab';
 requires 'Unicode::Japanese';
 
 on build => sub {

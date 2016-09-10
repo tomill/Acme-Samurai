@@ -1,5 +1,5 @@
 {
-   "abstract" : "Samurai de gozaru",
+   "abstract" : "Speak like a Samurai",
    "author" : [
       "Naoki Tomita <tomita@cpan.org>"
    ],
@@ -47,15 +47,20 @@
       },
       "runtime" : {
          "requires" : {
-            "Class::Accessor::Fast" : "0",
-            "Class::Trigger" : "0",
             "Encode" : "0",
             "File::ShareDir" : "0",
-            "Filter::Util::Call" : "0",
             "Lingua::JA::Alphabet::Yomi" : "0",
             "Lingua::JA::Numbers" : "0",
-            "Text::MeCab" : "0",
-            "Unicode::Japanese" : "0"
+            "Text::Mecabist" : "0",
+            "Unicode::Japanese" : "0",
+            "perl" : "5.010001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Encode" : "0",
+            "Test::Base" : "0",
+            "Test::More" : "0"
          }
       }
    },
