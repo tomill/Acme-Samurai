@@ -8,10 +8,6 @@ requires 'Lingua::JA::Alphabet::Yomi';
 requires 'Lingua::JA::Numbers';
 requires 'Unicode::Japanese';
 
-on build => sub {
-    requires 'ExtUtils::MakeMaker', '6.36';
-};
-
 on test => sub {
     requires 'Test::More';
     requires 'Test::Base';
