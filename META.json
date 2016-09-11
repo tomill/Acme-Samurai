@@ -46,7 +46,7 @@
             "File::ShareDir" : "0",
             "Lingua::JA::Alphabet::Yomi" : "0",
             "Lingua::JA::Numbers" : "0",
-            "Text::Mecabist" : "0",
+            "Text::Mecabist" : "0.02",
             "Unicode::Japanese" : "0",
             "perl" : "5.010001"
          }
