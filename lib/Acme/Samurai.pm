@@ -3,7 +3,7 @@ use 5.010001;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.02';
+our $VERSION = '0.04';
 
 use File::ShareDir qw/dist_file/;
 use Lingua::JA::Alphabet::Yomi qw/alphabet2yomi/;
